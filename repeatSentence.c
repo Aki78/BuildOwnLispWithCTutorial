@@ -1,4 +1,8 @@
 #include <stdio.h>
+#include<stdlib.h>
+
+#ifdef _WIN32
+#include<string.h>
 
 static char input[2048];
 
@@ -15,3 +19,8 @@ while(1){
 
 return 0;
 }
+
+#else
+#include <editline/readline.h>
+#include <editline/history.h>
+#endif
